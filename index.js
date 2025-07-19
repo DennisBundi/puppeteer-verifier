@@ -1,4 +1,4 @@
-const puppeteer = require('puppeteer-core');
+const puppeteer = require('puppeteer'); 
 const express = require('express');
 const app = express();
 
@@ -13,7 +13,6 @@ app.post('/verify-link', async (req, res) => {
 
   try {
     const browser = await puppeteer.launch({
-      executablePath: '/usr/bin/google-chrome', // System Chrome path for Render
       headless: true,
       args: ['--no-sandbox', '--disable-setuid-sandbox']
     });
